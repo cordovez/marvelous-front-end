@@ -1,0 +1,29 @@
+.comics {
+  display: flex;
+  margin-bottom: 60px;
+}
+.comics-cover {
+  display: flex;
+  height: 200px;
+  transform: rotate(-15deg);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.comics-info {
+  background: #e7c92d;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+}
+.comics-info h2 {
+  font-family: "Roboto Slab";
+  font-size: 1.5em;
+  color: #0d4e8f;
+  margin-bottom: 20px;
+}
+.comics-info p {
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 100;
+  font-style: italic;
+  line-height: 1.5em;
+}

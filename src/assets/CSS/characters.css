@@ -1,0 +1,55 @@
+.hidden {
+  display: none;
+  /* display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  position: relative;
+  border: 1px white dashed;
+  background: black; */
+}
+
+.character {
+  display: flex;
+  position: relative;
+  margin-top: 40px;
+}
+.mug-shot img {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  position: relative;
+  border: 1px white solid;
+}
+.no-mug {
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+.character-name {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  display: flex;
+  background: #ee181e;
+  height: 40px;
+  padding: 20px 20px 20px 50px;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+  z-index: -1;
+  position: absolute;
+  left: 100px;
+  top: 15px;
+}
+.character-description {
+  font-size: 0.85em;
+  font-style: italic;
+  background: white;
+  position: absolute;
+  width: 600px;
+  z-index: -2;
+  padding: 40px 20px 20px 130px;
+  left: 70px;
+  top: 30px;
+}

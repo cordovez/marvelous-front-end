@@ -1,1 +1,9 @@
 /* Other rules */
+body {
+  background-image: url("./assets/img/halftone3.png");
+  background-color: rgb(19, 34, 58);
+  background-repeat: repeat-x;
+  background-position-y: 400px;
+  background-image: ;
+  /* transform: rotate(-90deg); */
+}
