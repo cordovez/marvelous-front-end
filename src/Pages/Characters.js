@@ -1,6 +1,9 @@
 import "../assets/CSS/characters.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+// import Publications from "../components/Publications";
 
 const Characters = () => {
   const [data, setData] = useState();
@@ -21,32 +24,25 @@ const Characters = () => {
   return isLoading ? (
     <span>Data is still loading ...</span>
   ) : (
-    <div>
+    <div className="catalog">
       {data.results.map((character) => {
         return (
-          <div key={character._id} className="character">
-            <div className="mug-shot">
-              {character.thumbnail.path !==
-              "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available" ? (
+          <Link to={`/comics/${character._id}`}>
+            <div className="character">
+              <div className="mug-shot">
                 <img
                   src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                  alt=""
+                  type="submit"
+                  alt={character.name}
+                  value={character.name}
                 />
-              ) : (
-                <div className="no-mug"></div>
-              )}
-            </div>
-            <div className="character-name">
-              <h2>{character.name}</h2>
-            </div>
-            {character.description ? (
-              <div className="character-description">
-                <p>{character.description}</p>
               </div>
-            ) : (
-              <div className="hidden">x</div>
-            )}
-          </div>
+              <div className="character-name">{character.name}</div>
+              <div className="character-description">
+                {character.description}
+              </div>
+            </div>
+          </Link>
         );
       })}
     </div>

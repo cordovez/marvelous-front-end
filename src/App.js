@@ -1,9 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Halftone from "./assets/img/halftone3.png";
 import Characters from "./Pages/Characters";
 import Comics from "./Pages/Comics";
-import CharacterComics from "./Pages/CharacterComics";
+import Publications from "./components/Publications";
 import Masthead from "./components/Masthead";
 
 function App() {
@@ -14,10 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Characters />}></Route>
           <Route path="/comics" element={<Comics />}></Route>
-          <Route
-            path="/comics/:characterID"
-            element={<CharacterComics />}
-          ></Route>
+          <Route path="/comics/:id" element={<Publications />}></Route>
         </Routes>
       </div>
     </Router>

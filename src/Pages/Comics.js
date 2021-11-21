@@ -33,6 +33,7 @@ const Comics = () => {
             </div>
             <div className="comics-info">
               <h2>{comics.title}</h2>
+
               <p>{comics.description}</p>
             </div>
           </div>

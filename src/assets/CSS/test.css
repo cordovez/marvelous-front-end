@@ -1,0 +1,16 @@
+.container {
+  max-width: 1600px;
+}
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.picture {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: red;
+}
