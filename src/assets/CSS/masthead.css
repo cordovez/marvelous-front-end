@@ -14,7 +14,7 @@ body {
   object-position: 0px -250px;
   z-index: -1;
   position: relative;
-  opacity: 90%;
+  /* opacity: 90%; */
 }
 .masthead {
   display: flex;
