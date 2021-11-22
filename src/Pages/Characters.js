@@ -32,9 +32,9 @@ const Characters = () => {
               <div
                 className={
                   character.thumbnail.path !==
-                  "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+                  "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
                     ? "mug-shot"
-                    : "hidden"
+                    : "mug-shot" //change to "hidden" to hide but sacrifice layout
                 }
               >
                 <img
