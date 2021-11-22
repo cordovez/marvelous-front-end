@@ -29,21 +29,27 @@ const Characters = () => {
         return (
           <Link to={`/comics/${character._id}`}>
             <div className="character">
-              <div className="mug-shot">
-                {character.thumbnail.path !==
-                "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available" ? (
-                  <img
-                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                    type="submit"
-                    alt={character.name}
-                    value={character.name}
-                  />
-                ) : (
-                  <div className="no-mug"></div>
-                )}
+              <div
+                className={
+                  character.thumbnail.path !==
+                  "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+                    ? "mug-shot"
+                    : "hidden"
+                }
+              >
+                <img
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                  type="submit"
+                  alt={character.name}
+                  value={character.name}
+                />
               </div>
               <div className="character-name">{character.name}</div>
-              <div className="character-description">
+              <div
+                className={
+                  character.description ? "character-description" : "hidden"
+                }
+              >
                 {character.description}
               </div>
             </div>
