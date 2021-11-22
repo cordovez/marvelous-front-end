@@ -30,12 +30,17 @@ const Characters = () => {
           <Link to={`/comics/${character._id}`}>
             <div className="character">
               <div className="mug-shot">
-                <img
-                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                  type="submit"
-                  alt={character.name}
-                  value={character.name}
-                />
+                {character.thumbnail.path ===
+                "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available" ? (
+                  <div className="hidden">x</div>
+                ) : (
+                  <img
+                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                    type="submit"
+                    alt={character.name}
+                    value={character.name}
+                  />
+                )}
               </div>
               <div className="character-name">{character.name}</div>
               <div className="character-description">
